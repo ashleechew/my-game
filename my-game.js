@@ -6,6 +6,7 @@ function setup() {
 
 
 
+
 function draw() {
   
 	background('LAVENDER');
@@ -63,7 +64,7 @@ function draw() {
    
 		fill('ffffff');
    
-		 ellipse(mouseX, mouseY, 100, 100);
+		ellipse(mouseX, mouseY, 100, 100);
   
 	}
   
