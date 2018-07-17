@@ -1,71 +1,71 @@
-// constants to set up the environment
-
-const CANVAS_WIDTH = 500;
-
-const CANVAS_HEIGHT = 500;
-
-const BACKGROUND_COLOR = 'lightblue';
-
-
-
-// location of the player
-
-var playerX = 100;
-
-var playerY = 50;
-
-var name = "sam";
-
 function setup() {
-  createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
-  //fill('grey');
-  //arc(200, 50, 100, 80, 0, PI, CHORD);
+  
+	createCanvas(400, 400);
+
 }
 
-// loops forever
+
+
 function draw() {
-  // Draw background
-  background(BACKGROUND_COLOR);
   
-  // Draw player
-  drawPlayer(playerX, playerY);
+	background('LAVENDER');
+
   
-  // Player movement
-  if (keyIsDown(LEFT_ARROW)) {
-    playerX--;
-  }
-
-  else if (keyIsDown(RIGHT_ARROW)) {
-    playerX++;
-  }
-
-  else if (keyIsDown(UP_ARROW)) {
-    playerY--;
-  }
-
-  else if (keyIsDown(DOWN_ARROW)) {
-    playerY++;
-  }
-}
-
-// draws a snowman
-function drawPlayer(pX, pY) {
-  //replace this...
   
 	noStroke();
-  fill('white');
+  fill('gray');
   
-  // body
-  ellipse(pX, pY, 50, 50);
-  ellipse(pX, pY+50, 75, 75);
-  ellipse(pX, pY+100, 100, 100);
+	text("Eye follow you!!", 150, 50);
+ 
+ 
   
-  // eyes
-  fill('black');
-  ellipse(pX-10, pY-5, 10, 10);
-  ellipse(pX+10, pY-5, 10, 10);
+	noStroke();
   
-  // nose
-  fill('orange');
-  triangle(pX, pY, pX+10, pY+5, pX-10, pY+10);
+	fill('#3986f4');
+  
+	triangle(200, 100, 50, 300, 350, 300);
+  
+  
+
+	noStroke(); 
+  
+	fill('#58cdf4');
+  
+	ellipse(mouseX, mouseY, 100, 100);
+  
+  
+
+	noStroke();
+  
+	fill('white');
+  
+	ellipse(mouseX, mouseY, 100, 50);
+
+  
+  
+	noStroke();
+  
+	fill('black');
+  
+	ellipse(mouseX, mouseY, 50, 50);
+  
+  
+	
+	noStroke();
+  
+	fill('ffffff');
+  
+	ellipse(mouseX + 13, mouseY - 11, 10, 10);
+  
+
+  
+	if(mouseIsPressed) {
+   
+		fill('ffffff');
+   
+		 ellipse(mouseX, mouseY, 100, 100);
+  
+	}
+  
+
 }
